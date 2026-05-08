@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Doceria & Bolos - Seu Catálogo</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">🧁 Doceria & Bolos</div>
+                <nav>
+                    <ul>
+                        <li><a href="#inicio">Início</a></li>
+                        <li><a href="#produtos">Produtos</a></li>
+                        <li><a href="pedido.html">Pedido</a></li>
+                        <li><a href="#contato">Contato</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <div class="container">
+        <section class="hero" id="inicio">
+            <h1>Bem-vindo ao nosso Catálogo</h1>
+            <p>Descubra nossos deliciosos doces e bolos feitos com amor</p>
+        </section>
+
+        <div class="filters">
+            <button class="filter-btn active" onclick="filtrar('todos')">Todos</button>
+            <button class="filter-btn" onclick="filtrar('bolo')">Bolos</button>
+            <button class="filter-btn" onclick="filtrar('doce')">Doces</button>
+            <button class="filter-btn" onclick="filtrar('cupcake')">Cupcakes</button>
+        </div>
+
+        <section class="produtos" id="produtos">
+            <!-- Bolos -->
+            <div class="product-card" data-categoria="bolo">
+                <div class="product-image">🎂</div>
+                <div class="product-info">
+                    <div class="product-name">Bolo de Chocolate</div>
+                    <div class="product-category">Bolo</div>
+                    <p class="product-description">Bolo moist de chocolate com cobertura de ganache cremosa.</p>
+                    <div class="product-price">R$ 45,00</div>
+                    <button class="btn-contact" onclick="irParaPedido(this)">Pedir Agora</button>
+                </div>
+            </div>
+
+            <div class="product-card" data-categoria="bolo">
+                <div class="product-image">🍰</div>
+                <div class="product-info">
+                    <div class="product-name">Bolo de Cenoura</div>
+                    <div class="product-category">Bolo</div>
+                    <p class="product-description">Clássico bolo de cenoura com calda de chocolate.</p>
+                    <div class="product-price">R$ 40,00</div>
+                    <button class="btn-contact" onclick="irParaPedido(this)">Pedir Agora</button>
+                </div>
+            </div>
+
+            <div class="product-card" data-categoria="bolo">
+                <div class="product-image">🍓</div>
+                <div class="product-info">
+                    <div class="product-name">Bolo Red Velvet</div>
+                    <div class="product-category">Bolo</div>
+                    <p class="product-description">Elegante bolo red velvet com cobertura de cream cheese.</p>
+                    <div class="product-price">R$ 55,00</div>
+                    <button class="btn-contact" onclick="irParaPedido(this)">Pedir Agora</button>
+                </div>
+            </div>
+
+            <!-- Cupcakes -->
+            <div class="product-card" data-categoria="cupcake">
+                <div class="product-image">🧁</div>
+                <div class="product-info">
+                    <div class="product-name">Cupcake de Baunilha</div>
+                    <div class="product-category">Cupcake</div>
+                    <p class="product-description">Cupcakes macios de baunilha com cobertura de butter cream.</p>
+                    <div class="product-price">R$ 5,00 un.</div>
+                    <button class="btn-contact" onclick="irParaPedido(this)">Pedir Agora</button>
+                </div>
+            </div>
+
+            <div class="product-card" data-categoria="cupcake">
+                <div class="product-image">🍫</div>
+                <div class="product-info">
+                    <div class="product-name">Cupcake Triplo Chocolate</div>
+                    <div class="product-category">Cupcake</div>
+                    <p class="product-description">Intenso cupcake de chocolate com recheio e cobertura gourmet.</p>
+                    <div class="product-price">R$ 6,00 un.</div>
+                    <button class="btn-contact" onclick="irParaPedido(this)">Pedir Agora</button>
+                </div>
+            </div>
+
+            <!-- Doces -->
+            <div class="product-card" data-categoria="doce">
+                <div class="product-image">🍪</div>
+                <div class="product-info">
+                    <div class="product-name">Biscoito de Chocolate</div>
+                    <div class="product-category">Doce</div>
+                    <p class="product-description">Biscoitos crocantes com gotas de chocolate belga.</p>
+                    <div class="product-price">R$ 25,00</div>
+                    <button class="btn-contact" onclick="irParaPedido(this)">Pedir Agora</button>
+                </div>
+            </div>
+
+            <div class="product-card" data-categoria="doce">
+                <div class="product-image">🍬</div>
+                <div class="product-info">
+                    <div class="product-name">Brigadeiro Gourmet</div>
+                    <div class="product-category">Doce</div>
+                    <p class="product-description">Brigadeiro artesanal feito com chocolate de qualidade premium.</p>
+                    <div class="product-price">R$ 30,00</div>
+                    <button class="btn-contact" onclick="irParaPedido(this)">Pedir Agora</button>
+                </div>
+            </div>
+
+            <div class="product-card" data-categoria="doce">
+                <div class="product-image">🍮</div>
+                <div class="product-info">
+                    <div class="product-name">Pavê de Chocolate</div>
+                    <div class="product-category">Doce</div>
+                    <p class="product-description">Clássico pavê com biscoito, chocolate e calda.</p>
+                    <div class="product-price">R$ 35,00</div>
+                    <button class="btn-contact" onclick="irParaPedido(this)">Pedir Agora</button>
+                </div>
+            </div>
+
+            <div class="product-card" data-categoria="doce">
+                <div class="product-image">🧉</div>
+                <div class="product-info">
+                    <div class="product-name">Mousse de Frutas Vermelhas</div>
+                    <div class="product-category">Doce</div>
+                    <p class="product-description">Mousse leve e aerado com frutas vermelhas frescas.</p>
+                    <div class="product-price">R$ 28,00</div>
+                    <button class="btn-contact" onclick="irParaPedido(this)">Pedir Agora</button>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <section class="order-section" id="pedido">
+        <div class="container">
+            <h2>Finalizar Pedido</h2>
+            <p>Escolha um produto e siga para a página de pedido para concluir a compra.</p>
+            <div style="text-align:center; margin-top: 2rem;">
+                <a class="btn-contact" href="pedido.html">Ir para a página de pedido</a>
+            </div>
+        </div>
+    </section>
+
+    <footer id="contato">
+        <div class="container">
+            <h2>Entre em Contato</h2>
+            <p>📞 (21) 98520-1649</p>
+            <p>📧 contato@doceria.com.br</p>
+            <p>📍 (Itambi) - Itaboraí</p>
+            <p>📸 Instagram: <a href="https://www.instagram.com/deliciasgourmet_magalhaes?igsh=MTR0NXE5b3NhMjVyaA==" target="_blank" style="color: #ec4899; text-decoration: none; font-weight: bold;">@Deliciasgourmet_Magalhães</a></p>
+            <p style="margin-top: 2rem; font-size: 0.9rem;">© 2026 Doceria & Bolos. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

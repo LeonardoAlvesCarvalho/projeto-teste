@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pedido - Doceria & Bolos</title>
+    <link rel="stylesheet" href="pedido-styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Enviar Pedido</h1>
+            <p>Complete seus dados e confirme seu pedido no WhatsApp.</p>
+            <a class="btn-back" href="index.html">Voltar ao catálogo</a>
+        </header>
+
+        <div class="order-card">
+            <h2>Detalhes do pedido</h2>
+            <p>O pedido será enviado sempre para um número fixo de WhatsApp. Altere o número dentro do código no campo <strong>WHATSAPP_NUMBER</strong> se necessário.</p>
+
+            <form class="order-form" onsubmit="enviarPedido(event)">
+                <div class="form-group">
+                    <label for="name">Nome</label>
+                    <input type="text" id="name" name="name" placeholder="Seu nome" required>
+                </div>
+                <div class="form-group">
+                    <label for="instagram">Instagram (@)</label>
+                    <input type="text" id="instagram" name="instagram" placeholder="@seu_usuario">
+                </div>
+                <div class="form-group">
+                    <label for="product">Produto</label>
+                    <input type="text" id="product" name="product" readonly>
+                </div>
+                <div class="form-group">
+                    <label for="quantity">Quantidade</label>
+                    <input type="number" id="quantity" name="quantity" min="1" value="1" required>
+                </div>
+                <div class="form-group">
+                    <label for="notes">Observações</label>
+                    <textarea id="notes" name="notes" placeholder="Ex: Retirada no sábado."></textarea>
+                </div>
+                <button type="submit">Enviar Pedido pelo WhatsApp</button>
+                <p class="order-note">O pedido sempre será direcionado para o WhatsApp do estabelecimento.</p>
+            </form>
+            <div class="result" id="result"></div>
+        </div>
+    </div>
+
+    <script src="pedido-script.js"></script>
+</body>
+</html>
+
